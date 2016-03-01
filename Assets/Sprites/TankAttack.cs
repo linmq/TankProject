@@ -5,6 +5,7 @@ public class TankAttack : MonoBehaviour
 {
 	public GameObject shellPrefab;
 	public KeyCode fireKey = KeyCode.Space;
+	public float shellSpeed = 15f;
 
 	private Transform firePosition;
 
@@ -19,7 +20,8 @@ public class TankAttack : MonoBehaviour
 	{
 		if (Input.GetKeyDown (fireKey)) 
 		{
-			GameObject.Instantiate (shellPrefab, firePosition.position, firePosition.rotation);
+			GameObject go = GameObject.Instantiate (shellPrefab, firePosition.position, firePosition.rotation) as GameObject;
+			go.GetComponent<Rigidbody> ().velocity = go.transform.forward * shellSpeed;
 		}
 	}
 }
