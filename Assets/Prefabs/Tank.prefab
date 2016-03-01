@@ -78,9 +78,10 @@ GameObject:
   - 54: {fileID: 5474772}
   - 114: {fileID: 11441620}
   - 114: {fileID: 11476434}
+  - 114: {fileID: 11473020}
   m_Layer: 0
   m_Name: Tank
-  m_TagString: Untagged
+  m_TagString: Tank
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -445,6 +446,19 @@ MonoBehaviour:
   speed: 5
   angularSpeed: 10
   number: 1
+--- !u!114 &11473020
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 144636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4ca3ba8b363ed74394a5bc08742710a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 100
+  tankExplosion: {fileID: 151086, guid: ee49a9a8678ecf8468eb488e1ac8d42b, type: 2}
 --- !u!114 &11476434
 MonoBehaviour:
   m_ObjectHideFlags: 1
