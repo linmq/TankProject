@@ -6,6 +6,7 @@ public class TankAttack : MonoBehaviour
 	public GameObject shellPrefab;
 	public KeyCode fireKey = KeyCode.Space;
 	public float shellSpeed = 15f;
+	public AudioClip shotAudio;
 
 	private Transform firePosition;
 
@@ -20,6 +21,7 @@ public class TankAttack : MonoBehaviour
 	{
 		if (Input.GetKeyDown (fireKey)) 
 		{
+			AudioSource.PlayClipAtPoint (shotAudio, Camera.main.gameObject.transform.position);
 			GameObject go = GameObject.Instantiate (shellPrefab, firePosition.position, firePosition.rotation) as GameObject;
 			go.GetComponent<Rigidbody> ().velocity = go.transform.forward * shellSpeed;
 		}

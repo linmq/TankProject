@@ -459,6 +459,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 100
   tankExplosion: {fileID: 151086, guid: ee49a9a8678ecf8468eb488e1ac8d42b, type: 2}
+  tankExplosionAudio: {fileID: 8300000, guid: 5c27182a28a7eb942a362e6d198fe0e6, type: 3}
 --- !u!114 &11476434
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -473,6 +474,7 @@ MonoBehaviour:
   shellPrefab: {fileID: 194660, guid: d324d020667deca4793fe4147b7d6f20, type: 2}
   fireKey: 32
   shellSpeed: 10
+  shotAudio: {fileID: 8300000, guid: 672a9941361ad494a99fba36759eca80, type: 3}
 --- !u!198 &19859798
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -3509,7 +3511,15 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: tankExplosionAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: 5c27182a28a7eb942a362e6d198fe0e6, type: 3}
+    - target: {fileID: 0}
+      propertyPath: shotAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: 672a9941361ad494a99fba36759eca80, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 144636}

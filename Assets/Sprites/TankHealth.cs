@@ -5,18 +5,7 @@ public class TankHealth : MonoBehaviour
 {
 	public int hp = 100;
 	public GameObject tankExplosion;
-
-	// Use this for initialization
-	void Start () 
-	{
-	
-	}
-	
-	// Update is called once per frame
-	void Update () 
-	{
-	
-	}
+	public AudioClip tankExplosionAudio;
 
 	void TakeDamage()
 	{
@@ -27,6 +16,7 @@ public class TankHealth : MonoBehaviour
 		hp -= Random.Range (10, 20);
 		if (hp <= 0)
 		{
+			AudioSource.PlayClipAtPoint (tankExplosionAudio, Camera.main.gameObject.transform.position);
 			GameObject.Instantiate (tankExplosion, transform.position + Vector3.up, transform.rotation);
 			GameObject.Destroy (this.gameObject);
 		}

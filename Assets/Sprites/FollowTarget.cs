@@ -19,6 +19,8 @@ public class FollowTarget : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
+		if (play1 == null || play2 == null)
+			return;
 		transform.position = (play1.position + play2.position) / 2 + offset;
 		float distance = Vector3.Distance (play1.position, play2.position);
 		float size = distance * 0.58f;

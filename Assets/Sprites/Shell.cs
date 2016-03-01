@@ -5,18 +5,12 @@ public class Shell : MonoBehaviour
 {
 	public GameObject shellExplosionPrefab;
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+	public AudioClip shellExplosionAudio;
 
 	public void OnTriggerEnter(Collider collider)
 	{
+		AudioSource.PlayClipAtPoint(shellExplosionAudio, Camera.main.gameObject.transform.position);
+
 		GameObject.Instantiate (shellExplosionPrefab, transform.position, transform.rotation);
 		GameObject.Destroy (this.gameObject);
 
